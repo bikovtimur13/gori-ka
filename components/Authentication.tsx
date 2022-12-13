@@ -1,12 +1,12 @@
 import { FC } from 'react';
 import styled from 'styled-components';
-import { userType } from '../types';
+import { userProps } from '../types';
 
 type userTypeProps = {
-  user: userType;
+  user: userProps;
 };
 
-const Authentication: FC<userType> = () => {
+const Authentication: FC<userProps> = () => {
   return (
     <Container>
       <Header>

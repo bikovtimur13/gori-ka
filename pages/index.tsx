@@ -1,15 +1,26 @@
 import Head from 'next/head';
 import Image from 'next/image';
 import styles from '../styles/Home.module.css';
+import Meta from '../app/utils/Meta';
+import Authentication from '../components/Authentication';
 
 export default function Home() {
+  // class MyDocuments extends Document{
+  //   static async getInitialProps(ctx: DocumentContext): Promise<any>{
+  //     const initialProps = await.Document.getInitialProps(ctx);
+  //     return {...initialProps};
+  //   }
+  // }
+
   return (
     <div className={styles.container}>
-      <Head>
+      {/* <Head>
         <title>Gori-ka</title>
         <meta name="description" content="Gori-ka app" />
         <link rel="icon" href="/images/gorika-icon-favicon.svg" />
-      </Head>
+      </Head> */}
+
+      <Meta title="Gori-ka" description="Gori-ka" favicon="/favicon.ico" />
 
       <main className={styles.main}>
         <h1 className={styles.title}>
