@@ -12,12 +12,12 @@ const Authentication: FC<userProps> = () => {
       <ModalWrapper>
         <Header>
           <HeaderImg src="../public/images/gorika-icon.svg"></HeaderImg>
-          <HeaderTitle>
-            <span>Gōri-ka iD</span>
-          </HeaderTitle>
+          <HeaderTitle>Gōri-ka iD</HeaderTitle>
         </Header>
         <Input></Input>
-        <Btn></Btn>
+        <Btn>
+          <span>Выслать пароль</span>
+        </Btn>
       </ModalWrapper>
     </Container>
   );
@@ -36,8 +36,10 @@ const ModalWrapper = styled.div`
   background: #000000;
   display: flex;
   flex-direction: column;
-  max-height: 310px;
+  max-height: 262px;
   border-radius: 11px;
+  padding: 20px;
+  justify-content: space-evenly;
 `;
 
 const Header = styled.div`
@@ -45,12 +47,38 @@ const Header = styled.div`
   width: 151px;
 `;
 
-const Input = styled.input``;
+const Input = styled.input`
+  background: #ffffff;
+  height: 70px;
+  border-radius: 10px;
+`;
 
-const Btn = styled.button``;
+const Btn = styled.button`
+  background: #ffffff;
+  height: 70px;
+  border-radius: 10px;
+  background: #30d5c8;
+
+  span {
+    background: #30d5c8;
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 21px;
+    line-height: 30px;
+    color: #000000;
+  }
+`;
 
 const HeaderImg = styled.img``;
 
-const HeaderTitle = styled.span``;
+const HeaderTitle = styled.span`
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 21px;
+  line-height: 30px;
+  color: #ffffff;
+`;
 
 export default Authentication;
