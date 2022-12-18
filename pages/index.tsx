@@ -2,7 +2,6 @@ import Head from 'next/head';
 import Image from 'next/image';
 import styles from '../styles/Home.module.css';
 import Meta from '../app/utils/Meta';
-import Authentication from '../components/Authentication';
 
 export default function Home() {
   // class MyDocuments extends Document{
@@ -14,12 +13,6 @@ export default function Home() {
 
   return (
     <div className={styles.container}>
-      {/* <Head>
-        <title>Gori-ka</title>
-        <meta name="description" content="Gori-ka app" />
-        <link rel="icon" href="/images/gorika-icon-favicon.svg" />
-      </Head> */}
-
       <Meta title="Gori-ka" description="Gori-ka" favicon="/favicon.ico" />
 
       <main className={styles.main}>
