@@ -11,12 +11,18 @@ const Authentication: FC<userProps> = () => {
     <Container>
       <ModalWrapper>
         <Header>
-          <HeaderImg src="../public/images/gorika-icon.svg"></HeaderImg>
+          <HeaderImg src="/images/gorika-icon.svg"></HeaderImg>
           <HeaderTitle>Gōri-ka iD</HeaderTitle>
         </Header>
-        <Input></Input>
+        <Input
+          placeholder="name@mailbox.com"
+          type="email"
+          name="email"
+          required
+        ></Input>
         <Btn>
-          <span>Выслать пароль</span>
+          Выслать пароль
+          <ImgArrow src="/images/long-arrow-right.svg" />
         </Btn>
       </ModalWrapper>
     </Container>
@@ -40,9 +46,13 @@ const ModalWrapper = styled.div`
   border-radius: 11px;
   padding: 20px;
   justify-content: space-evenly;
+  margin-top: 50px;
 `;
 
 const Header = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   height: 42px;
   width: 151px;
 `;
@@ -51,30 +61,66 @@ const Input = styled.input`
   background: #ffffff;
   height: 70px;
   border-radius: 10px;
+  background: #bababa;
+  text-align: center;
+  font-weight: 400;
+  font-size: 21px;
+  line-height: 30px;
+
+  &::placeholder {
+    font-weight: 400;
+    font-size: 21px;
+    line-height: 30px;
+    color: #a7a7a7;
+  }
+
+  &:active {
+    background: #ffffff;
+    border: none;
+    color: #000000;
+
+    &::placeholder {
+      opacity: 0;
+    }
+  }
+  &:hover {
+    background: #ffffff;
+    border: none;
+    color: #000000;
+
+    &::placeholder {
+      opacity: 0;
+    }
+  }
 `;
 
 const Btn = styled.button`
-  background: #ffffff;
+  background: #808080;
   height: 70px;
   border-radius: 10px;
-  background: #30d5c8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-  span {
+  background: #808080;
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 21px;
+  line-height: 30px;
+  color: #000000;
+
+  &:hover {
     background: #30d5c8;
-    font-family: 'Lato';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 21px;
-    line-height: 30px;
-    color: #000000;
+    cursor: pointer;
   }
 `;
+
+const ImgArrow = styled.img``;
 
 const HeaderImg = styled.img``;
 
 const HeaderTitle = styled.span`
-  font-family: 'Lato';
-  font-style: normal;
   font-weight: 400;
   font-size: 21px;
   line-height: 30px;

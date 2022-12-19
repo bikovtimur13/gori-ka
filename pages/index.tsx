@@ -1,7 +1,9 @@
 import Head from 'next/head';
 import Image from 'next/image';
+import styled from 'styled-components';
 import styles from '../styles/Home.module.css';
 import Meta from '../app/utils/Meta';
+import Header from '../components/Header';
 
 export default function Home() {
   // class MyDocuments extends Document{
@@ -13,7 +15,14 @@ export default function Home() {
 
   return (
     <div className={styles.container}>
-      <Meta title="Gori-ka" description="Gori-ka" favicon="/favicon.ico" />
+      <Container>
+        <Meta title="Gori-ka" description="Gori-ka" favicon="favicon.ico" />
+        <Header />
+      </Container>
     </div>
   );
 }
+
+const Container = styled.div`
+  max-width: 1920px;
+`;
