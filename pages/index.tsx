@@ -16,7 +16,11 @@ export default function Home() {
   return (
     <div className={styles.container}>
       <Container>
-        <Meta title="Gori-ka" description="Gori-ka" favicon="favicon.ico" />
+        <Meta
+          title="Gori-ka"
+          description="Gori-ka"
+          favicon="/images/favicon.ico"
+        />
         <Header />
       </Container>
     </div>
