@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import styles from '../styles/Home.module.css';
 import Meta from '../app/utils/Meta';
 import Header from '../components/Header';
+import ArticleSwiper from '../components/ArticleSwiper';
 
 export default function Home() {
   // class MyDocuments extends Document{
@@ -22,6 +23,7 @@ export default function Home() {
           favicon="/images/favicon.ico"
         />
         <Header />
+        <ArticleSwiper />
       </Container>
     </div>
   );
