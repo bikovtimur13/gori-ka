@@ -2,6 +2,7 @@ import React from 'react';
 import { FC } from 'react';
 import styled from 'styled-components';
 import styles from '../styles/Home.module.css';
+import 'swiper/css';
 
 import { useRef } from 'react';
 import SwiperCore, { EffectFade, Pagination } from 'swiper';
@@ -15,88 +16,92 @@ const ArticleSwiper: FC = () => {
   return (
     <Container className={styles.containerBox}>
       <Swiper
+        slidesPerView={3}
         ref={swiperRef}
         effect={'fade'}
+        spaceBetween={10}
         pagination={{
           clickable: true,
         }}
-        autoplay={{
-          delay: 500,
-          // disableOnInteraction: false,
-          // pauseOnMouseEnter: true,
-        }}
-        className="mySwiper"
-      ></Swiper>
+        loop={true}
+        // autoplay={{
+        //   delay: 1000,
+        //   disableOnInteraction: false,
+        //   pauseOnMouseEnter: true,
+        // }}
+        autoplay={true}
+        className="articleSwiper"
+      >
+        <SwiperSlide>
+          <ArticleContainer>
+            <ArticleImage>
+              <ArticleImg src="/images/article-img-1.png" alt="article-image" />
+            </ArticleImage>
+            <ArticleTitleContainer>
+              <ArticleTitleTop>
+                Подвернуть штанины по диагонали, очень в...
+              </ArticleTitleTop>
+              <ArticleTitleBottom>Проект «Сальто»</ArticleTitleBottom>
+            </ArticleTitleContainer>
+          </ArticleContainer>
+        </SwiperSlide>
 
-      <SwiperSlide>
-        <ArticleContainer>
-          <ArticleImage>
-            <ArticleImg src="/images/article-img-1.png" alt="article-image" />
-          </ArticleImage>
-          <ArticleTitleContainer>
-            <ArticleTitleTop>
-              Подвернуть штанины по диагонали, очень в...
-            </ArticleTitleTop>
-            <ArticleTitleBottom>Проект «Сальто»</ArticleTitleBottom>
-          </ArticleTitleContainer>
-        </ArticleContainer>
-      </SwiperSlide>
+        <SwiperSlide>
+          <ArticleContainer>
+            <ArticleImage>
+              <ArticleImg src="/images/article-img-2.png" alt="article-image" />
+            </ArticleImage>
+            <ArticleTitleContainer>
+              <ArticleTitleTop>
+                Подвернуть штанины по диагонали, очень в...
+              </ArticleTitleTop>
+              <ArticleTitleBottom>Проект «Сальто»</ArticleTitleBottom>
+            </ArticleTitleContainer>
+          </ArticleContainer>
+        </SwiperSlide>
 
-      <SwiperSlide>
-        <ArticleContainer>
-          <ArticleImage>
-            <ArticleImg src="/images/article-img-2.png" alt="article-image" />
-          </ArticleImage>
-          <ArticleTitleContainer>
-            <ArticleTitleTop>
-              Подвернуть штанины по диагонали, очень в...
-            </ArticleTitleTop>
-            <ArticleTitleBottom>Проект «Сальто»</ArticleTitleBottom>
-          </ArticleTitleContainer>
-        </ArticleContainer>
-      </SwiperSlide>
+        <SwiperSlide>
+          <ArticleContainer>
+            <ArticleImage>
+              <ArticleImg src="/images/article-img-3.png" alt="article-image" />
+            </ArticleImage>
+            <ArticleTitleContainer>
+              <ArticleTitleTop>
+                Подвернуть штанины по диагонали, очень в...
+              </ArticleTitleTop>
+              <ArticleTitleBottom>Проект «Сальто»</ArticleTitleBottom>
+            </ArticleTitleContainer>
+          </ArticleContainer>
+        </SwiperSlide>
 
-      <SwiperSlide>
-        <ArticleContainer>
-          <ArticleImage>
-            <ArticleImg src="/images/article-img-3.png" alt="article-image" />
-          </ArticleImage>
-          <ArticleTitleContainer>
-            <ArticleTitleTop>
-              Подвернуть штанины по диагонали, очень в...
-            </ArticleTitleTop>
-            <ArticleTitleBottom>Проект «Сальто»</ArticleTitleBottom>
-          </ArticleTitleContainer>
-        </ArticleContainer>
-      </SwiperSlide>
+        <SwiperSlide>
+          <ArticleContainer>
+            <ArticleImage>
+              <ArticleImg src="/images/article-img-4.png" alt="article-image" />
+            </ArticleImage>
+            <ArticleTitleContainer>
+              <ArticleTitleTop>
+                Подвернуть штанины по диагонали, очень в...
+              </ArticleTitleTop>
+              <ArticleTitleBottom>Проект «Сальто»</ArticleTitleBottom>
+            </ArticleTitleContainer>
+          </ArticleContainer>
+        </SwiperSlide>
 
-      <SwiperSlide>
-        <ArticleContainer>
-          <ArticleImage>
-            <ArticleImg src="/images/article-img-4.png" alt="article-image" />
-          </ArticleImage>
-          <ArticleTitleContainer>
-            <ArticleTitleTop>
-              Подвернуть штанины по диагонали, очень в...
-            </ArticleTitleTop>
-            <ArticleTitleBottom>Проект «Сальто»</ArticleTitleBottom>
-          </ArticleTitleContainer>
-        </ArticleContainer>
-      </SwiperSlide>
-
-      <SwiperSlide>
-        <ArticleContainer>
-          <ArticleImage>
-            <ArticleImg src="/images/article-img-5.png" alt="article-image" />
-          </ArticleImage>
-          <ArticleTitleContainer>
-            <ArticleTitleTop>
-              Подвернуть штанины по диагонали, очень в...
-            </ArticleTitleTop>
-            <ArticleTitleBottom>Проект «Сальто»</ArticleTitleBottom>
-          </ArticleTitleContainer>
-        </ArticleContainer>
-      </SwiperSlide>
+        <SwiperSlide>
+          <ArticleContainer>
+            <ArticleImage>
+              <ArticleImg src="/images/article-img-5.png" alt="article-image" />
+            </ArticleImage>
+            <ArticleTitleContainer>
+              <ArticleTitleTop>
+                Подвернуть штанины по диагонали, очень в...
+              </ArticleTitleTop>
+              <ArticleTitleBottom>Проект «Сальто»</ArticleTitleBottom>
+            </ArticleTitleContainer>
+          </ArticleContainer>
+        </SwiperSlide>
+      </Swiper>
     </Container>
   );
 };
