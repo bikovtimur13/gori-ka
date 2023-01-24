@@ -16,12 +16,12 @@ export default function Home() {
 
   return (
     <div className={styles.container}>
+      <Meta
+        title="Gori-ka"
+        description="Gori-ka"
+        favicon="/images/favicon.ico"
+      />
       <Container>
-        <Meta
-          title="Gori-ka"
-          description="Gori-ka"
-          favicon="/images/favicon.ico"
-        />
         <Header />
         <ArticleSwiper />
       </Container>

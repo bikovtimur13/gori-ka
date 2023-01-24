@@ -5,31 +5,38 @@ import styles from '../styles/Home.module.css';
 import 'swiper/css';
 
 import { useRef } from 'react';
-import SwiperCore, { EffectFade, Pagination } from 'swiper';
+import SwiperCore, {
+  EffectFade,
+  Pagination,
+  Autoplay,
+  Navigation,
+} from 'swiper';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 
-SwiperCore.use([EffectFade, Pagination]);
-
 const ArticleSwiper: FC = () => {
-  const swiperRef = useRef(null);
+  // const swiperRef = useRef(null);
+  SwiperCore.use([EffectFade, Pagination, Autoplay]);
+  const swiperRef = useRef() as any;
   return (
     <Container className={styles.containerBox}>
       <Swiper
-        slidesPerView={3}
+        slidesPerView={4.6}
+        // centeredSlides={true}
         ref={swiperRef}
-        effect={'fade'}
-        spaceBetween={10}
+        // effect={'fade'}
+        spaceBetween={22}
         pagination={{
           clickable: true,
         }}
         loop={true}
-        // autoplay={{
-        //   delay: 1000,
-        //   disableOnInteraction: false,
-        //   pauseOnMouseEnter: true,
-        // }}
-        autoplay={true}
+        navigation={true}
+        autoplay={{
+          delay: 3000,
+          disableOnInteraction: false,
+          // pauseOnMouseEnter: true,
+        }}
+        modules={[Autoplay, Pagination, Navigation]}
         className="articleSwiper"
       >
         <SwiperSlide>
@@ -111,14 +118,18 @@ const Container = styled.div`
 `;
 
 const ArticleContainer = styled.div`
-  width: 100%;
-  max-width: 398px;
+  /* width: 100%; */
+  /* width: 398px; */
   height: 140px;
   border-radius: 10px;
   padding: 20px;
   background-color: #383838;
   display: flex;
   align-items: center;
+
+  box-sizing: border-box;
+  width: 100%;
+  overflow: hidden;
 `;
 
 const ArticleImage = styled.div``;
