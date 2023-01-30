@@ -5,6 +5,7 @@ import styles from '../styles/Home.module.css';
 import Meta from '../app/utils/Meta';
 import Header from '../components/Header';
 import ArticleSwiper from '../components/ArticleSwiper';
+import SortPanel from '../components/SortPanel';
 
 export default function Home() {
   // class MyDocuments extends Document{
@@ -24,6 +25,7 @@ export default function Home() {
       <Container>
         <Header />
         <ArticleSwiper />
+        <SortPanel />
       </Container>
     </div>
   );
