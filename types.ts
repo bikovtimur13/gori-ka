@@ -1,4 +1,4 @@
-export type taskProps = {
+export type taskType = {
   task: {
     taskNum: number;
     taskTitle: string;
@@ -7,14 +7,14 @@ export type taskProps = {
   };
 };
 
-export type userProps = {
+export type userType = {
   user: {
     id: number;
     email: string;
     name: string;
     dateOfBirth: number;
     male: number;
-    tasks: Array<taskProps>;
+    tasks: Array<taskType>;
   };
 };
 

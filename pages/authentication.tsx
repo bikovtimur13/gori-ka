@@ -1,14 +1,15 @@
 import { FC } from 'react';
 import styled from 'styled-components';
-import { userProps } from '../types';
+import styles from '../styles/Home.module.css';
+import { userType } from '../types';
 
 type userTypeProps = {
-  user: userProps;
+  user: userType;
 };
 
-const Authentication: FC<userProps> = () => {
+const Authentication: FC<userType> = () => {
   return (
-    <Container>
+    <Container className={styles.containerBox}>
       <ModalWrapper>
         <Header>
           <HeaderImg src="/images/gorika-icon.svg"></HeaderImg>
@@ -30,7 +31,7 @@ const Authentication: FC<userProps> = () => {
 };
 
 const Container = styled.div`
-  background: #30d5c8;
+  background: #fafafa;
   height: 100vh;
   width: 100%;
   display: flex;
@@ -103,7 +104,6 @@ const Btn = styled.button`
   justify-content: center;
 
   background: #808080;
-  font-family: 'Lato';
   font-style: normal;
   font-weight: 700;
   font-size: 21px;

@@ -15,7 +15,6 @@ import SwiperCore, {
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 const ArticleSwiper: FC = () => {
-  // const swiperRef = useRef(null);
   SwiperCore.use([EffectFade, Pagination, Autoplay]);
   const swiperRef = useRef() as any;
   return (
@@ -118,8 +117,6 @@ const Container = styled.div`
 `;
 
 const ArticleContainer = styled.div`
-  /* width: 100%; */
-  /* width: 398px; */
   height: 140px;
   border-radius: 10px;
   padding: 20px;

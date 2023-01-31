@@ -33,7 +33,6 @@ const SortPanelWrapper = styled.div`
   column-gap: 42px;
 
   p {
-    font-family: 'Lato';
     font-style: normal;
     font-weight: 500;
     font-size: 21px;
